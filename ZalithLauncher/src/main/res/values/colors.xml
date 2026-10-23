@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Liquid-style visual system: cool surfaces, ink text and indigo actions. -->
+    <!-- Liquid-style visual system: cool surfaces, ink text and blue actions. -->
     <color name="black_or_white">#171B2A</color>
     <color name="background_app">#F4F6FB</color>
     <color name="background_app_error">#FFF1F2</color>
@@ -8,38 +8,38 @@
     <color name="background_status_bar">#F4F6FB</color>
     <color name="background_menu_top">#FFFFFF</color>
     <color name="background_menu_top_error">#FFF0F1</color>
-    <color name="background_menu_element">#625CF5</color>
-    <color name="background_ripple_effect">#24625CF5</color>
+    <color name="background_menu_element">#1E88E5</color>
+    <color name="background_ripple_effect">#261E88E5</color>
 
     <color name="button_background">#F1F3F9</color>
-    <color name="button_background_selected">#E6E8FF</color>
-    <color name="button_primary_background">#625CF5</color>
+    <color name="button_background_selected">#E3F2FD</color>
+    <color name="button_primary_background">#1E88E5</color>
     <color name="button_primary_text">#FFFFFF</color>
     <color name="dialog_background">#FFFFFF</color>
 
     <color name="menu_bar">#E8EBF4</color>
     <color name="menu_bar_text">#171B2A</color>
     <color name="menu_overlay">#F8FFFFFF</color>
-    <color name="menu_progress">#625CF5</color>
+    <color name="menu_progress">#1E88E5</color>
 
     <color name="background_item">#FFFFFF</color>
-    <color name="background_item_selected">#F0EFFF</color>
+    <color name="background_item_selected">#E3F2FD</color>
     <color name="background_item_disabled">#FFF0F1</color>
     <color name="background_sponsor_intermediate">#FFFFE8C7</color>
     <color name="background_sponsor_advanced">#FFFFDAD3</color>
 
     <color name="edit_box_fill">#F3F5FA</color>
-    <color name="edit_box_fill_selected">#EDEBFF</color>
+    <color name="edit_box_fill_selected">#EAF4FF</color>
 
-    <color name="mod_category_fill">#E8EAF5</color>
+    <color name="mod_category_fill">#E8F1FA</color>
     <color name="text_background_fill">#E6E9F2</color>
-    <color name="settings_category">#625CF5</color>
+    <color name="settings_category">#1E88E5</color>
     <color name="favorite_color">#F36D86</color>
     <color name="icon_color">#626B82</color>
     <color name="primary_text">#171B2A</color>
     <color name="secondary_text">#727B91</color>
     <color name="card_stroke">#E2E6F0</color>
-    <color name="accent_soft">#EEEDFF</color>
+    <color name="accent_soft">#EAF4FF</color>
     <color name="surface_raised">#FFFFFF</color>
     <color name="danger_text">#C63548</color>
 </resources>

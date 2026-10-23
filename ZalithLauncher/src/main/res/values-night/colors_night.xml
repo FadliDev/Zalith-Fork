@@ -8,38 +8,38 @@
     <color name="background_status_bar">#0E1220</color>
     <color name="background_menu_top">#151A2A</color>
     <color name="background_menu_top_error">#381923</color>
-    <color name="background_menu_element">#A49BFF</color>
-    <color name="background_ripple_effect">#30A49BFF</color>
+    <color name="background_menu_element">#42A5F5</color>
+    <color name="background_ripple_effect">#301E88E5</color>
 
     <color name="button_background">#22293A</color>
-    <color name="button_background_selected">#34314F</color>
-    <color name="button_primary_background">#776FF7</color>
+    <color name="button_background_selected">#153654</color>
+    <color name="button_primary_background">#1976D2</color>
     <color name="button_primary_text">#FFFFFF</color>
     <color name="dialog_background">#191F30</color>
 
     <color name="menu_bar">#202638</color>
     <color name="menu_bar_text">#F3F4FB</color>
     <color name="menu_overlay">#F2192031</color>
-    <color name="menu_progress">#A49BFF</color>
+    <color name="menu_progress">#42A5F5</color>
 
     <color name="background_item">#171D2D</color>
-    <color name="background_item_selected">#292642</color>
+    <color name="background_item_selected">#102B45</color>
     <color name="background_item_disabled">#30202B</color>
     <color name="background_sponsor_intermediate">#503E2D</color>
     <color name="background_sponsor_advanced">#4B292F</color>
 
     <color name="edit_box_fill">#202638</color>
-    <color name="edit_box_fill_selected">#2B2945</color>
+    <color name="edit_box_fill_selected">#173A59</color>
 
     <color name="mod_category_fill">#2B3144</color>
     <color name="text_background_fill">#333A4D</color>
-    <color name="settings_category">#A49BFF</color>
+    <color name="settings_category">#42A5F5</color>
     <color name="favorite_color">#FF8DA1</color>
     <color name="icon_color">#B5BDD0</color>
     <color name="primary_text">#F3F4FB</color>
     <color name="secondary_text">#A0A9BD</color>
     <color name="card_stroke">#2A3247</color>
-    <color name="accent_soft">#292642</color>
+    <color name="accent_soft">#102B45</color>
     <color name="surface_raised">#191F30</color>
     <color name="danger_text">#FF98A7</color>
 </resources>

@@ -41,12 +41,7 @@ class NewbieGuideUtils {
 
         @JvmStatic
         fun showOnlyOne(tag: String): Boolean {
-            println(tag)
-            if (!NEWBIE_TAGS.contains(tag)) {
-                NEWBIE_TAGS.add(tag)
-                saveTags()
-                return false
-            }
+            // Tutorial/newbie overlays are disabled in the Liquid build.
             return true
         }
 

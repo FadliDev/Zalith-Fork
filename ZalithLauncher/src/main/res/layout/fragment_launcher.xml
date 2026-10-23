@@ -104,49 +104,7 @@
                     android:textSize="@dimen/_10ssp"
                     android:textStyle="bold" />
 
-                <LinearLayout
-                    android:id="@+id/about_button"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_62sdp"
-                    android:layout_marginBottom="@dimen/_8sdp"
-                    android:background="@drawable/background_item"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="@dimen/_12sdp">
 
-                    <FrameLayout
-                        android:layout_width="@dimen/_40sdp"
-                        android:layout_height="@dimen/_40sdp"
-                        android:background="@drawable/home_icon_container">
-                        <ImageView
-                            android:id="@+id/about_icon"
-                            android:layout_width="@dimen/_22sdp"
-                            android:layout_height="@dimen/_22sdp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_ui_info"
-                            android:tint="@color/background_menu_element" />
-                    </FrameLayout>
-
-                    <TextView
-                        android:id="@+id/about_text"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_12sdp"
-                        android:layout_weight="1"
-                        android:textColor="@color/primary_text"
-                        android:textSize="@dimen/_12ssp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="›"
-                        android:textColor="@color/secondary_text"
-                        android:textSize="@dimen/_24ssp" />
-                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/custom_control_button"
