@@ -152,8 +152,8 @@ class VersionAdapter(
                 }
                 favorite.setImageDrawable(
                     ContextCompat.getDrawable(mContext,
-                        if (listener.isVersionFavorited(version.getVersionName())) R.drawable.ic_favorite
-                        else R.drawable.ic_favorite_border
+                        if (listener.isVersionFavorited(version.getVersionName())) R.drawable.ic_ui_star
+                        else R.drawable.ic_ui_star
                     )
                 )
 

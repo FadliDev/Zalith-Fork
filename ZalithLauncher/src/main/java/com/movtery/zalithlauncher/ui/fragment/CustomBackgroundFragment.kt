@@ -244,7 +244,7 @@ class CustomBackgroundFragment : FragmentWithAnim(R.layout.fragment_custom_backg
 
             pasteButton.setContentDescription(getString(R.string.generic_reset))
             addFileButton.setContentDescription(getString(R.string.custom_background_add))
-            pasteButton.setImageDrawable(ContextCompat.getDrawable(requireActivity(), R.drawable.ic_reset))
+            pasteButton.setImageDrawable(ContextCompat.getDrawable(requireActivity(), R.drawable.ic_ui_reset))
 
             ZHTools.setTooltipText(
                 returnButton,

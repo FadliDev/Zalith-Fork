@@ -166,10 +166,10 @@ class InstallGameFragment : FragmentWithAnim(R.layout.fragment_install_game), Vi
         layout.isSelected = contains
         if (contains) {
             imageView.isEnabled = true
-            imageView.setImageResource(R.drawable.ic_close)
+            imageView.setImageResource(R.drawable.ic_ui_close)
         } else {
             imageView.isEnabled = false
-            imageView.setImageResource(R.drawable.ic_spinner_arrow_right)
+            imageView.setImageResource(R.drawable.ic_ui_chevron)
         }
     }
 

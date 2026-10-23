@@ -15,7 +15,7 @@
         android:layout_height="@dimen/_18sdp"
         android:layout_marginStart="@dimen/_12sdp"
         android:scaleType="centerInside"
-        android:src="@drawable/ic_file"
+        android:src="@drawable/ic_ui_file"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

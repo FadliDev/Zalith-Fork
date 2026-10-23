@@ -316,7 +316,7 @@ class ModsFragment : FragmentWithAnim(R.layout.fragment_mods) {
                 createFolderButton.setImageDrawable(
                     ContextCompat.getDrawable(
                         requireContext(),
-                        R.drawable.ic_download
+                        R.drawable.ic_ui_download
                     )
                 )
                 pasteButton.setVisibility(if (PasteFile.getInstance().pasteType != null) View.VISIBLE else View.GONE)

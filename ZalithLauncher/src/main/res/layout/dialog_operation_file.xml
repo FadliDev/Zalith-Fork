@@ -4,19 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:paddingBottom="@dimen/_8sdp"
+    android:paddingHorizontal="@dimen/_14sdp"
+    android:paddingBottom="@dimen/_14sdp"
     android:baselineAligned="true"
     android:minWidth="@dimen/dialog_min_width"
     tools:ignore="ContentDescription">
 
     <ImageView
         android:id="@+id/close_button"
-        android:layout_width="@dimen/_18sdp"
-        android:layout_height="@dimen/_18sdp"
+        android:layout_width="@dimen/_32sdp"
+        android:layout_height="@dimen/_32sdp"
         android:layout_marginTop="@dimen/_12sdp"
         android:layout_marginEnd="@dimen/_16sdp"
         android:background="?android:attr/selectableItemBackgroundBorderless"
-        android:src="@drawable/ic_close"
+        android:src="@drawable/ic_ui_close"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -94,7 +95,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="@dimen/_22sdp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/ic_copy" />
+                android:src="@drawable/ic_ui_copy" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -123,7 +124,7 @@
                 android:scaleType="fitCenter"
                 android:scaleX="0.8"
                 android:scaleY="0.8"
-                android:src="@drawable/ic_edit" />
+                android:src="@drawable/ic_ui_edit" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -150,7 +151,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="@dimen/_22sdp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/ic_share" />
+                android:src="@drawable/ic_ui_share" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -189,7 +190,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="@dimen/_22sdp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/ic_move" />
+                android:src="@drawable/ic_ui_move" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -216,7 +217,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="@dimen/_22sdp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/ic_menu_delete_forever" />
+                android:src="@drawable/ic_ui_delete" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -243,7 +244,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="@dimen/_22sdp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/ic_more" />
+                android:src="@drawable/ic_ui_more" />
 
             <TextView
                 android:id="@+id/more_text_view"

@@ -251,7 +251,7 @@ class VersionsListFragment : FragmentWithAnim(R.layout.fragment_versions_list) {
     private fun showFavoritesActionPopupWindow(anchorView: View) {
         refreshActionPopupWindow(anchorView, ViewSingleActionPopupBinding.inflate(LayoutInflater.from(requireActivity())).apply {
             icon.setImageDrawable(
-                ContextCompat.getDrawable(requireActivity(), R.drawable.ic_add)
+                ContextCompat.getDrawable(requireActivity(), R.drawable.ic_ui_add)
             )
             text.setText(R.string.version_manager_favorites_add_category)
             text.setOnClickListener {
@@ -271,7 +271,7 @@ class VersionsListFragment : FragmentWithAnim(R.layout.fragment_versions_list) {
     private fun showFavoritesDeletePopupWindow(anchorView: View, folderName: String) {
         refreshActionPopupWindow(anchorView, ViewSingleActionPopupBinding.inflate(LayoutInflater.from(requireActivity())).apply {
             icon.setImageDrawable(
-                ContextCompat.getDrawable(requireActivity(), R.drawable.ic_menu_delete_forever)
+                ContextCompat.getDrawable(requireActivity(), R.drawable.ic_ui_delete)
             )
             text.setText(R.string.version_manager_favorites_remove_folder_title)
             text.setOnClickListener {

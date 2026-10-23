@@ -110,7 +110,7 @@
             android:id="@+id/cancel_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
             android:layout_weight="1"
             android:text="@android:string/cancel" />
 
@@ -126,7 +126,7 @@
             android:id="@+id/update_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_marginStart="@dimen/_4sdp"
             android:layout_weight="1"
             android:text="@string/update_dialog_yes" />
 

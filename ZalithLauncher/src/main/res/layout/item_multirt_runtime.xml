@@ -62,7 +62,7 @@
             android:contentDescription="@string/multirt_delete_runtime"
             android:paddingVertical="@dimen/padding_heavy"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_menu_delete_forever"
+            android:src="@drawable/ic_ui_delete"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"

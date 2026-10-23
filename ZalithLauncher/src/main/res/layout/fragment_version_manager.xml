@@ -50,7 +50,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/shortcuts_mods"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/shortcuts_mods"
-                app:srcCompat="@drawable/ic_profile_mods" />
+                app:srcCompat="@drawable/ic_ui_mods" />
 
             <com.movtery.zalithlauncher.ui.view.AnimButton
                 android:id="@+id/shortcuts_mods"
@@ -72,7 +72,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/game_path"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/game_path"
-                app:srcCompat="@drawable/ic_profile_folder" />
+                app:srcCompat="@drawable/ic_ui_folder" />
 
             <com.movtery.zalithlauncher.ui.view.AnimButton
                 android:id="@+id/game_path"
@@ -94,7 +94,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/resource_path"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/resource_path"
-                app:srcCompat="@drawable/ic_profile_resource_pack" />
+                app:srcCompat="@drawable/ic_ui_resource" />
 
             <com.movtery.zalithlauncher.ui.view.AnimButton
                 android:id="@+id/resource_path"
@@ -116,7 +116,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/world_path"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/world_path"
-                app:srcCompat="@drawable/ic_profile_saves" />
+                app:srcCompat="@drawable/ic_ui_world" />
 
             <com.movtery.zalithlauncher.ui.view.AnimButton
                 android:id="@+id/world_path"
@@ -140,7 +140,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/shader_path"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/shader_path"
-                app:srcCompat="@drawable/ic_profile_shader_pack" />
+                app:srcCompat="@drawable/ic_ui_shader" />
 
             <com.movtery.zalithlauncher.ui.view.AnimButton
                 android:id="@+id/shader_path"
@@ -186,7 +186,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/logs_path"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/logs_path"
-                app:srcCompat="@drawable/ic_profile_logs" />
+                app:srcCompat="@drawable/ic_ui_file" />
 
             <com.movtery.zalithlauncher.ui.view.AnimButton
                 android:id="@+id/logs_path"
@@ -207,7 +207,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/crash_report_path"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/crash_report_path"
-                app:srcCompat="@drawable/ic_profile_crash_report" />
+                app:srcCompat="@drawable/ic_ui_warning" />
 
             <com.movtery.zalithlauncher.ui.view.AnimButton
                 android:id="@+id/crash_report_path"
@@ -265,7 +265,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/version_settings"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/version_settings"
-                app:srcCompat="@drawable/ic_setting" />
+                app:srcCompat="@drawable/ic_ui_settings" />
 
             <com.movtery.zalithlauncher.ui.view.AnimButton
                 android:id="@+id/version_settings"
@@ -287,7 +287,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/version_rename"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/version_rename"
-                app:srcCompat="@drawable/ic_edit" />
+                app:srcCompat="@drawable/ic_ui_edit" />
 
             <com.movtery.zalithlauncher.ui.view.AnimButton
                 android:id="@+id/version_rename"
@@ -311,7 +311,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/version_copy"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/version_copy"
-                app:srcCompat="@drawable/ic_copy" />
+                app:srcCompat="@drawable/ic_ui_copy" />
 
             <com.movtery.zalithlauncher.ui.view.AnimButton
                 android:id="@+id/version_copy"
@@ -335,7 +335,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/version_delete"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/version_delete"
-                app:srcCompat="@drawable/ic_menu_delete_forever" />
+                app:srcCompat="@drawable/ic_ui_delete" />
 
             <com.movtery.zalithlauncher.ui.view.AnimButton
                 android:id="@+id/version_delete"

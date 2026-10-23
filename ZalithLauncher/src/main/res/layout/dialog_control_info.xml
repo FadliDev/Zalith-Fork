@@ -33,7 +33,7 @@
             android:contentDescription="@string/option_edit_controls"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:src="@drawable/ic_edit"
+            android:src="@drawable/ic_ui_edit"
             android:scaleType="fitCenter"
             android:background="?android:attr/selectableItemBackgroundBorderless" />
 

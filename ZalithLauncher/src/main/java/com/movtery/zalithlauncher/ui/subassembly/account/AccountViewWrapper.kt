@@ -30,10 +30,10 @@ class AccountViewWrapper(private val parentFragment: FragmentWithAnim? = null, v
             val account = AccountsManager.currentAccount
             account ?: run {
                 if (parentFragment == null) {
-                    userIcon.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.ic_help))
+                    userIcon.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.ic_ui_help))
                     userName.text = null
                 } else {
-                    userIcon.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.ic_add))
+                    userIcon.setImageDrawable(ContextCompat.getDrawable(mContext, R.drawable.ic_ui_add))
                     userName.setText(R.string.account_add)
                 }
                 accountType.visibility = View.GONE

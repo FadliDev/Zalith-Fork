@@ -153,10 +153,10 @@ class FileRecyclerViewCreator(
                         getFileIcon(file, resources)
                     }
 
-                    FileIcon.FILE -> ContextCompat.getDrawable(context, R.drawable.ic_file)
+                    FileIcon.FILE -> ContextCompat.getDrawable(context, R.drawable.ic_ui_file)
                 }
             } else {
-                ContextCompat.getDrawable(context, R.drawable.ic_folder)
+                ContextCompat.getDrawable(context, R.drawable.ic_ui_folder)
             }
         }
 
@@ -172,9 +172,9 @@ class FileRecyclerViewCreator(
         @SuppressLint("UseCompatLoadingForDrawables")
         private fun getFileIcon(file: File, resources: Resources): Drawable {
             return if (file.isDirectory) {
-                resources.getDrawable(R.drawable.ic_folder, resources.newTheme())
+                resources.getDrawable(R.drawable.ic_ui_folder, resources.newTheme())
             } else {
-                resources.getDrawable(R.drawable.ic_file, resources.newTheme())
+                resources.getDrawable(R.drawable.ic_ui_file, resources.newTheme())
             }
         }
     }

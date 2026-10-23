@@ -22,15 +22,22 @@
         <item name="android:textSize">@dimen/_12ssp</item>
     </style>
 
-    <style name="CustomDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+    <style name="CustomDialogStyle" parent="Theme.AppCompat.DayNight.Dialog">
         <item name="android:windowBackground">@drawable/dialog_background</item>
+        <item name="android:windowMinWidthMajor">88%</item>
+        <item name="android:windowMinWidthMinor">88%</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
         <item name="android:scrollbarThumbHorizontal">@color/background_menu_element</item>
         <item name="android:scrollbarThumbVertical">@color/background_menu_element</item>
         <item name="colorAccent">@color/background_menu_element</item>
     </style>
 
-    <style name="CustomAlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+    <style name="CustomAlertDialogTheme" parent="Theme.AppCompat.DayNight.Dialog.Alert">
         <item name="android:windowBackground">@drawable/dialog_background</item>
+        <item name="android:windowMinWidthMajor">88%</item>
+        <item name="android:windowMinWidthMinor">88%</item>
+        <item name="android:windowNoTitle">true</item>
         <item name="android:scrollbarThumbHorizontal">@color/background_menu_element</item>
         <item name="android:scrollbarThumbVertical">@color/background_menu_element</item>
         <item name="colorAccent">@color/background_menu_element</item>

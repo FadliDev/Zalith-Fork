@@ -33,7 +33,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/disableGestures_title"
@@ -68,7 +70,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/disableDoubleTap_title"
@@ -102,7 +106,9 @@
                 android:id="@+id/timeLongPressTrigger_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground">
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/timeLongPressTrigger_title"
@@ -170,7 +176,9 @@
                 android:id="@+id/buttonscale_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground">
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/buttonscale_title"
@@ -220,7 +228,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/buttonAllCaps_title"
@@ -273,7 +283,9 @@
                 android:id="@+id/mousescale_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground">
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/mousescale_title"
@@ -322,7 +334,9 @@
                 android:id="@+id/mousespeed_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground">
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/mousespeed_title"
@@ -372,7 +386,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/mouse_start_title"
@@ -405,7 +421,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/custom_mouse_title"
@@ -450,7 +468,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/enableGyro_title"
@@ -484,7 +504,9 @@
                 android:id="@+id/gyroSensitivity_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground">
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/gyroSensitivity_title"
@@ -533,7 +555,9 @@
                 android:id="@+id/gyroSampleRate_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground">
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/gyroSampleRate_title"
@@ -583,7 +607,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/gyroSmoothing_title"
@@ -619,7 +645,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/gyroInvertX_title"
@@ -654,7 +682,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/gyroInvertY_title"
@@ -708,7 +738,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/changeControllerBindings_title"
@@ -734,7 +766,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/resetControllerBindings_title"
@@ -759,7 +793,9 @@
                 android:id="@+id/gamepad_deadzone_scale_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground">
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/gamepad_deadzone_scale_title"

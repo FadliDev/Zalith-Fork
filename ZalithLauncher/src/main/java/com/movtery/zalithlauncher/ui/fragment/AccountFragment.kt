@@ -367,7 +367,7 @@ class AccountFragment : FragmentWithAnim(R.layout.fragment_account), View.OnClic
                 view.root.setOnLongClickListener { v ->
                     refreshActionPopupWindow(v, ViewSingleActionPopupBinding.inflate(LayoutInflater.from(activity)).apply {
                         icon.setImageDrawable(
-                            ContextCompat.getDrawable(requireActivity(), R.drawable.ic_menu_delete_forever)
+                            ContextCompat.getDrawable(requireActivity(), R.drawable.ic_ui_delete)
                         )
                         text.setText(R.string.generic_delete)
                         text.setOnClickListener {

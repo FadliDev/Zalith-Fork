@@ -13,7 +13,7 @@ class SettingsButtonWrapper(val button: ImageButton) {
             buttonType = type
             button.setImageDrawable(
                 ContextCompat.getDrawable(button.context,
-                    if (type == ButtonType.SETTINGS) R.drawable.ic_menu_settings else R.drawable.ic_menu_home
+                    if (type == ButtonType.SETTINGS) R.drawable.ic_ui_settings else R.drawable.ic_ui_home
                 )
             )
             onTypeChangeListener?.onChange(type)

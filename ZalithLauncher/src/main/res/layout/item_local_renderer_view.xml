@@ -50,7 +50,7 @@
         android:layout_width="@dimen/_24sdp"
         android:layout_height="@dimen/_24sdp"
         android:layout_marginEnd="@dimen/_8sdp"
-        android:src="@drawable/ic_menu_delete_forever"
+        android:src="@drawable/ic_ui_delete"
         android:background="?android:attr/selectableItemBackgroundBorderless"
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"

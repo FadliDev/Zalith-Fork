@@ -126,7 +126,7 @@
                             android:layout_width="@dimen/_22sdp"
                             android:layout_height="@dimen/_22sdp"
                             android:layout_gravity="center"
-                            android:src="@drawable/ic_about"
+                            android:src="@drawable/ic_ui_info"
                             android:tint="@color/background_menu_element" />
                     </FrameLayout>
 
@@ -170,7 +170,7 @@
                             android:layout_width="@dimen/_22sdp"
                             android:layout_height="@dimen/_22sdp"
                             android:layout_gravity="center"
-                            android:src="@drawable/ic_menu_custom_controls"
+                            android:src="@drawable/ic_ui_controls"
                             android:tint="@color/background_menu_element" />
                     </FrameLayout>
 
@@ -214,7 +214,7 @@
                             android:layout_width="@dimen/_22sdp"
                             android:layout_height="@dimen/_22sdp"
                             android:layout_gravity="center"
-                            android:src="@drawable/ic_folder"
+                            android:src="@drawable/ic_ui_folder"
                             android:tint="@color/background_menu_element" />
                     </FrameLayout>
 
@@ -302,7 +302,7 @@
                             android:layout_width="@dimen/_22sdp"
                             android:layout_height="@dimen/_22sdp"
                             android:layout_gravity="center"
-                            android:src="@drawable/ic_share"
+                            android:src="@drawable/ic_ui_share"
                             android:tint="@color/background_menu_element" />
                     </FrameLayout>
 
@@ -427,7 +427,7 @@
                     android:contentDescription="@string/version_manager_shortcuts"
                     android:padding="@dimen/_14sdp"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_setting"
+                    android:src="@drawable/ic_ui_settings"
                     android:tint="@color/background_menu_element"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />

@@ -96,7 +96,7 @@
                 android:background="?android:attr/selectableItemBackgroundBorderless"
                 android:rotation="-90"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_spinner_arrow_right"
+                android:src="@drawable/ic_ui_chevron"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -107,7 +107,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/operate_layout" android:layout_width="match_parent" android:layout_height="236dp" app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/operate_layout" android:layout_width="match_parent" android:layout_height="@dimen/_220sdp" app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
 
         <View
@@ -131,9 +131,9 @@
 
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/icon"
-                        android:layout_width="@dimen/_70sdp"
-                        android:layout_height="@dimen/_70sdp"
-                        android:layout_marginTop="@dimen/_45sdp"
+                        android:layout_width="@dimen/_48sdp"
+                        android:layout_height="@dimen/_48sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
@@ -227,7 +227,7 @@
                     android:background="?android:attr/selectableItemBackgroundBorderless"
                     android:contentDescription="@string/about_access_link"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_launch_link"
+                    android:src="@drawable/ic_ui_link"
                     android:visibility="gone" />
 
             </LinearLayout>

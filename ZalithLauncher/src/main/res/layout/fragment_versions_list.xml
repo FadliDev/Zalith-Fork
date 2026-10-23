@@ -37,7 +37,7 @@
                     android:layout_width="@dimen/_24sdp"
                     android:layout_height="@dimen/_24sdp"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/ic_download"
+                    android:src="@drawable/ic_ui_download"
                     tools:ignore="ContentDescription" />
 
                 <TextView
@@ -103,7 +103,7 @@
                     android:scaleX="0.92"
                     android:scaleY="0.92"
                     android:background="?android:attr/selectableItemBackgroundBorderless"
-                    android:src="@drawable/ic_more"
+                    android:src="@drawable/ic_ui_more"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

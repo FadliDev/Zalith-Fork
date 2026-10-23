@@ -33,7 +33,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/checkLibraries_title"
@@ -69,7 +71,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/verifyManifest_title"
@@ -105,7 +109,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/resourceImageCache_title"
@@ -140,7 +146,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/addFullResourceName_title"
@@ -176,7 +184,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/downloadSource_title"
@@ -210,7 +220,9 @@
                 android:id="@+id/maxDownloadThreads_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground">
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/maxDownloadThreads_title"
@@ -279,7 +291,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/launcherTheme_title"
@@ -305,7 +319,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/custom_background_title"
@@ -331,7 +347,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/animation_title"
@@ -366,7 +384,9 @@
                 android:id="@+id/animationSpeed_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground">
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/animationSpeed_title"
@@ -415,7 +435,9 @@
                 android:id="@+id/pageOpacity_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground">
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/pageOpacity_title"
@@ -484,7 +506,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/enableLogOutput_title"
@@ -519,7 +543,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/quitLauncher_title"
@@ -555,7 +581,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/clean_up_cache_title"
@@ -581,7 +609,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/check_update_title"
@@ -607,7 +637,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/acceptPreReleaseUpdates_title"
@@ -643,7 +675,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/notification_permission_request_title"

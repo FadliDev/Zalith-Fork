@@ -53,7 +53,7 @@
         android:layout_marginEnd="@dimen/_8sdp"
         android:contentDescription="@string/generic_close"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_close"
+        android:src="@drawable/ic_ui_close"
         app:layout_constraintBottom_toBottomOf="@+id/top_log_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

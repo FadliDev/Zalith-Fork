@@ -24,7 +24,7 @@
             android:layout_height="@dimen/_18sdp"
             android:background="?android:attr/selectableItemBackgroundBorderless"
             android:contentDescription="@string/generic_close"
-            android:src="@drawable/ic_close"
+            android:src="@drawable/ic_ui_close"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

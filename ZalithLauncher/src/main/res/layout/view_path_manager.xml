@@ -21,7 +21,7 @@
             android:layout_width="@dimen/_20sdp"
             android:layout_height="@dimen/_20sdp"
             android:layout_marginStart="@dimen/_4sdp"
-            android:src="@drawable/ic_move" />
+            android:src="@drawable/ic_ui_move" />
 
         <com.movtery.zalithlauncher.ui.view.AnimTextView
             android:id="@+id/goto_view"
@@ -51,7 +51,7 @@
             android:layout_marginStart="@dimen/_4sdp"
             android:scaleX="1.1"
             android:scaleY="1.1"
-            android:src="@drawable/ic_edit" />
+            android:src="@drawable/ic_ui_edit" />
 
         <com.movtery.zalithlauncher.ui.view.AnimTextView
             android:id="@+id/rename"
@@ -81,7 +81,7 @@
             android:layout_marginStart="@dimen/_4sdp"
             android:scaleX="1.2"
             android:scaleY="1.2"
-            android:src="@drawable/ic_menu_delete_forever" />
+            android:src="@drawable/ic_ui_delete" />
 
         <com.movtery.zalithlauncher.ui.view.AnimTextView
             android:id="@+id/delete"

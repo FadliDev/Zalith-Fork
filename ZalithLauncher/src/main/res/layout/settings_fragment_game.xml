@@ -33,7 +33,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/version_isolation_title"
@@ -68,7 +70,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/versionCustomInfo_title"
@@ -122,7 +126,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/autoSetGameLanguage_title"
@@ -158,7 +164,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/gameLanguageOverridden_title"
@@ -193,7 +201,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/setGameLanguage_title"
@@ -238,7 +248,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/install_jre_title"
@@ -264,7 +276,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/selectRuntimeMode_title"
@@ -299,7 +313,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/javaArgs_title"
@@ -333,7 +349,9 @@
                 android:id="@+id/allocation_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground">
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/allocation_title"
@@ -391,7 +409,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/java_sandbox_title"
@@ -445,7 +465,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/gameMenuShowMemory_title"
@@ -480,7 +502,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/gameMenuShowFPS_title"
@@ -515,7 +539,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/gameMenuMemoryText_title"
@@ -550,7 +576,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?android:attr/selectableItemBackground"
-                android:padding="@dimen/_12sdp">
+                android:padding="@dimen/_12sdp"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/gameMenuLocation_title"
@@ -575,7 +603,9 @@
                 android:id="@+id/gameMenuInfoRefreshRate_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground">
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/gameMenuInfoRefreshRate_title"
@@ -624,7 +654,9 @@
                 android:id="@+id/gameMenuAlpha_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?android:attr/selectableItemBackground">
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:layout_marginHorizontal="@dimen/_4sdp">
 
                 <TextView
                     android:id="@+id/gameMenuAlpha_title"

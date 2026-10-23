@@ -384,7 +384,7 @@ class FilesFragment : FragmentWithAnim(R.layout.fragment_files) {
                 operateView.addFileButton.visibility = View.GONE
                 operateView.returnButton.apply {
                     contentDescription = getString(R.string.file_select_folder)
-                    setImageDrawable(resources.getDrawable(R.drawable.ic_check, requireActivity().theme))
+                    setImageDrawable(resources.getDrawable(R.drawable.ic_ui_check, requireActivity().theme))
                 }
             }
         }

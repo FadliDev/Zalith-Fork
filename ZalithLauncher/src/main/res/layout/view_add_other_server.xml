@@ -21,7 +21,7 @@
             android:layout_height="@dimen/_24sdp"
             android:layout_marginStart="@dimen/_4sdp"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_add" />
+            android:src="@drawable/ic_ui_add" />
 
         <com.movtery.zalithlauncher.ui.view.AnimTextView
             android:id="@+id/add_other_server"
@@ -49,7 +49,7 @@
             android:layout_height="@dimen/_24sdp"
             android:layout_marginStart="@dimen/_4sdp"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_add" />
+            android:src="@drawable/ic_ui_add" />
 
         <com.movtery.zalithlauncher.ui.view.AnimTextView
             android:id="@+id/add_uniform_pass"
