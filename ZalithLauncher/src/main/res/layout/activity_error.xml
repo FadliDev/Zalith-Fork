@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/background"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/background_app">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/top_view"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_35sdp"
+        android:layout_width="match_parent" android:layout_height="@dimen/_56sdp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" android:background="@color/background_menu_top">
 
         <TextView
             android:id="@+id/error_title"
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/_32ssp"
         android:textStyle="bold"
-        android:textColor="@android:color/holo_red_dark"
+        android:textColor="@color/danger_text"
         android:visibility="gone"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,14 +41,9 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/constraintLayout2"
-        app:layout_constraintHorizontal_weight="7"
+        android:id="@+id/constraintLayout" android:layout_width="match_parent" android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/top_view">
+        app:layout_constraintTop_toBottomOf="@+id/top_view" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/constraintLayout2">
 
         <ScrollView
             android:id="@+id/scroll_view"
@@ -98,7 +93,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_8sdp"
-                    android:textColor="#BD0B0B"
+                    android:textColor="@color/danger_text"
                     android:textStyle="bold"
                     android:visibility="gone"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -113,24 +108,17 @@
 
     <View
         android:id="@+id/shadowView"
-        android:layout_width="@dimen/_4sdp"
-        android:layout_height="0dp"
-        android:layout_marginStart="@dimen/_minus4sdp"
-        android:background="@drawable/shadow_gradient_right"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/constraintLayout"
-        app:layout_constraintTop_toBottomOf="@+id/top_view"/>
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/card_stroke"
+        app:layout_constraintBottom_toTopOf="@id/constraintLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/menu_overlay"
+        android:id="@+id/constraintLayout2" android:layout_width="match_parent" android:layout_height="156dp" android:background="@color/surface_raised"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_weight="3"
-        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
-        app:layout_constraintTop_toBottomOf="@+id/top_view">
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
 
         <com.movtery.zalithlauncher.ui.view.AnimButton
             android:id="@+id/share_log"

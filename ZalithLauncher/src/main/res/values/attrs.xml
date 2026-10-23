@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <declare-styleable name="AnimButton">
+        <attr name="primary_button" format="boolean"/>
+    </declare-styleable>
     <declare-styleable name="AnimConstraintLayout">
         <attr name="ripple_for_constraint" format="boolean"/>
     </declare-styleable>

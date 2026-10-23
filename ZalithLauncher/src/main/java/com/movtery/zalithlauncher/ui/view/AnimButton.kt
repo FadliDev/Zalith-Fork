@@ -18,7 +18,10 @@ open class AnimButton @JvmOverloads constructor(
 ) : AppCompatButton(context, attrs, defStyleAttr) {
     init {
         isAllCaps = false
-        setRipple()
+        val attributes = context.obtainStyledAttributes(attrs, R.styleable.AnimButton, defStyleAttr, 0)
+        val primaryButton = attributes.getBoolean(R.styleable.AnimButton_primary_button, false)
+        attributes.recycle()
+        setRipple(primaryButton)
         stateListAnimator = AnimatorInflater.loadStateListAnimator(context, R.xml.anim_scale)
         translationZ = Tools.dpToPx(4f)
     }
@@ -31,13 +34,17 @@ open class AnimButton @JvmOverloads constructor(
         }
     }
 
-    private fun setRipple() {
+    private fun setRipple(primaryButton: Boolean) {
+        val backgroundResource = if (primaryButton) {
+            R.drawable.button_background_primary
+        } else {
+            R.drawable.button_background
+        }
         val rippleDrawable = RippleDrawable(
             ColorStateList.valueOf(ContextCompat.getColor(context, R.color.background_ripple_effect)),
-            ResourcesCompat.getDrawable(resources, R.drawable.button_background, context.theme),
+            ResourcesCompat.getDrawable(resources, backgroundResource, context.theme),
             null
         )
-
         background = rippleDrawable
     }
 }

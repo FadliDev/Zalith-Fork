@@ -7,14 +7,9 @@
     android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/version_layout"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/operate_layout"
-        app:layout_constraintHorizontal_weight="6.5"
+        android:id="@+id/version_layout" android:layout_width="match_parent" android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/operate_layout">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -60,33 +55,17 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/operate_layout"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_weight="3"
-        app:layout_constraintStart_toEndOf="@+id/version_layout"
-        app:layout_constraintTop_toTopOf="parent">
+        android:id="@+id/operate_layout" android:layout_width="match_parent" android:layout_height="110dp" app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
 
         <View
-            android:id="@+id/shadowView"
-            android:layout_width="@dimen/_4sdp"
-            android:layout_height="match_parent"
-            android:background="@drawable/shadow_gradient_right"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@id/operate_layout"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/shadowView" android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/card_stroke"  app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/operate_main_layout"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:background="@color/menu_overlay"
+            android:id="@+id/operate_main_layout" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/surface_raised"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/shadowView">
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
 
             <com.movtery.zalithlauncher.ui.view.AnimEditText
                 android:id="@+id/search_version"

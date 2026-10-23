@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item>
-        <shape
-            android:shape="rectangle" >
-            <corners android:radius="@dimen/_4sdp" />
-            <padding
-                android:left="@dimen/_4sdp"
-                android:right="@dimen/_4sdp" />
-            <solid
-                android:color="@color/mod_category_fill" />
-        </shape>
-    </item>
-</layer-list>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="@dimen/_10sdp" />
+    <solid android:color="@color/mod_category_fill" />
+    <stroke android:width="@dimen/_1sdp" android:color="@color/card_stroke" />
+    <padding android:left="@dimen/_8sdp" android:right="@dimen/_8sdp" />
+</shape>

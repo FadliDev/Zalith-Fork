@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/settings_layout"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_48sdp"
+        android:layout_height="@dimen/_58sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -18,8 +18,8 @@
             android:id="@+id/settings_tab"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/menu_overlay"
-            app:tab_item_is_equ_width="true"
+            android:background="@color/background_menu_top"
+            app:tab_item_is_equ_width="false"
             app:tab_draw_indicator="true"
             app:tab_indicator_style="STYLE_BOTTOM"
             app:tab_indicator_height="@dimen/_2sdp"
@@ -31,15 +31,16 @@
                 android:foreground="?attr/selectableItemBackground"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:paddingHorizontal="@dimen/_6sdp">
+                android:paddingHorizontal="@dimen/_10sdp">
 
                 <ImageView
                     android:id="@+id/video_image"
-                    android:layout_width="@dimen/_20sdp"
-                    android:layout_height="@dimen/_20sdp"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
                     android:contentDescription="@string/setting_category_video"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/ic_setting_video" />
+                    app:srcCompat="@drawable/ic_setting_video" android:tint="@color/icon_color"
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -48,8 +49,8 @@
                     android:maxLines="1"
                     android:ellipsize="end"
                     android:text="@string/setting_category_video"
-                    android:textColor="@color/black_or_white"
-                    android:textSize="@dimen/_9sdp" />
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/_10ssp" />
             </LinearLayout>
 
             <LinearLayout
@@ -58,15 +59,16 @@
                 android:foreground="?attr/selectableItemBackground"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:paddingHorizontal="@dimen/_6sdp">
+                android:paddingHorizontal="@dimen/_10sdp">
 
                 <ImageView
                     android:id="@+id/controls_image"
-                    android:layout_width="@dimen/_20sdp"
-                    android:layout_height="@dimen/_20sdp"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
                     android:contentDescription="@string/setting_category_control"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/ic_menu_custom_controls" />
+                    app:srcCompat="@drawable/ic_menu_custom_controls" android:tint="@color/icon_color"
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -75,8 +77,8 @@
                     android:maxLines="1"
                     android:ellipsize="end"
                     android:text="@string/setting_category_control"
-                    android:textColor="@color/black_or_white"
-                    android:textSize="@dimen/_9sdp" />
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/_10ssp" />
             </LinearLayout>
 
             <LinearLayout
@@ -85,15 +87,16 @@
                 android:foreground="?attr/selectableItemBackground"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:paddingHorizontal="@dimen/_6sdp">
+                android:paddingHorizontal="@dimen/_10sdp">
 
                 <ImageView
                     android:id="@+id/game_image"
-                    android:layout_width="@dimen/_20sdp"
-                    android:layout_height="@dimen/_20sdp"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
                     android:contentDescription="@string/setting_category_game"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/ic_setting_game" />
+                    app:srcCompat="@drawable/ic_setting_game" android:tint="@color/icon_color"
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -102,8 +105,8 @@
                     android:maxLines="1"
                     android:ellipsize="end"
                     android:text="@string/setting_category_game"
-                    android:textColor="@color/black_or_white"
-                    android:textSize="@dimen/_9sdp" />
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/_10ssp" />
             </LinearLayout>
 
             <LinearLayout
@@ -112,15 +115,16 @@
                 android:foreground="?attr/selectableItemBackground"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:paddingHorizontal="@dimen/_6sdp">
+                android:paddingHorizontal="@dimen/_10sdp">
 
                 <ImageView
                     android:id="@+id/launcher_image"
-                    android:layout_width="@dimen/_20sdp"
-                    android:layout_height="@dimen/_20sdp"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
                     android:contentDescription="@string/setting_category_launcher"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/ic_setting_launcher" />
+                    app:srcCompat="@drawable/ic_setting_launcher" android:tint="@color/icon_color"
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -129,8 +133,8 @@
                     android:maxLines="1"
                     android:ellipsize="end"
                     android:text="@string/setting_category_launcher"
-                    android:textColor="@color/black_or_white"
-                    android:textSize="@dimen/_9sdp" />
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/_10ssp" />
             </LinearLayout>
 
             <LinearLayout
@@ -139,15 +143,16 @@
                 android:foreground="?attr/selectableItemBackground"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:paddingHorizontal="@dimen/_6sdp">
+                android:paddingHorizontal="@dimen/_10sdp">
 
                 <ImageView
                     android:id="@+id/experimental_image"
-                    android:layout_width="@dimen/_20sdp"
-                    android:layout_height="@dimen/_20sdp"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
                     android:contentDescription="@string/setting_category_experimental"
                     android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/ic_setting_experimental" />
+                    app:srcCompat="@drawable/ic_setting_experimental" android:tint="@color/icon_color"
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -156,8 +161,8 @@
                     android:maxLines="1"
                     android:ellipsize="end"
                     android:text="@string/setting_category_experimental"
-                    android:textColor="@color/black_or_white"
-                    android:textSize="@dimen/_9sdp" />
+                    android:textColor="@color/primary_text"
+                    android:textSize="@dimen/_10ssp" />
             </LinearLayout>
 
         </com.angcyo.tablayout.DslTabLayout>
@@ -165,8 +170,8 @@
         <View
             android:id="@+id/shadowView"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_2sdp"
-            android:background="@drawable/shadow_gradient_down"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/card_stroke"
             app:layout_constraintBottom_toBottomOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
