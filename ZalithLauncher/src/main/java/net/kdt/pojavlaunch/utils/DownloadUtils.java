@@ -75,24 +75,57 @@ public class DownloadUtils {
                                              Tools.DownloaderFeedback monitor) throws IOException {
         FileUtils.ensureParentDirectory(outputFile);
 
-        HttpURLConnection conn = (HttpURLConnection) new URL(urlInput).openConnection();
-        conn.setReadTimeout(UrlManager.TIME_OUT.getFirst());
-        InputStream readStr = conn.getInputStream();
-        try (FileOutputStream fos = new FileOutputStream(outputFile)) {
-            int current;
-            int overall = 0;
-            int length = conn.getContentLength();
+        HttpURLConnection conn = null;
+        InputStream readStr = null;
+        long overall = 0;
+        try {
+            // Android's HTTP stack can occasionally reuse a stale HTTP/1.1 connection,
+            // which may result in "ProtocolException: unexpected end of stream".
+            // Always use a fresh connection for Minecraft downloads.
+            conn = (HttpURLConnection) new URL(urlInput).openConnection();
+            conn.setConnectTimeout(UrlManager.TIME_OUT.getFirst());
+            conn.setReadTimeout(UrlManager.TIME_OUT.getFirst());
+            conn.setUseCaches(false);
+            conn.setRequestProperty("Connection", "close");
+            conn.setRequestProperty("Accept-Encoding", "identity");
+            conn.connect();
 
+            int responseCode = conn.getResponseCode();
+            if (responseCode < 200 || responseCode >= 300) {
+                throw new IOException("HTTP " + responseCode + " " + conn.getResponseMessage());
+            }
+
+            int length = conn.getContentLength();
+            readStr = conn.getInputStream();
             if (buffer == null) buffer = new byte[65535];
 
-            while ((current = readStr.read(buffer)) != -1) {
-                overall += current;
-                fos.write(buffer, 0, current);
-                monitor.updateProgress(overall, length);
+            // Write from scratch. If the stream is cut short, the incomplete file is
+            // deleted below and ensureSha1() will automatically retry the download.
+            try (FileOutputStream fos = new FileOutputStream(outputFile, false)) {
+                int current;
+                while ((current = readStr.read(buffer)) != -1) {
+                    if (current == 0) continue;
+                    overall += current;
+                    fos.write(buffer, 0, current);
+                    monitor.updateProgress(overall, length);
+                }
+                fos.flush();
             }
-            conn.disconnect();
+
+            if (length >= 0 && overall != length) {
+                throw new IOException("Incomplete download: received " + overall
+                        + " of " + length + " bytes from " + urlInput);
+            }
         } catch (SocketTimeoutException e) {
             throw new IOException("Download timed out: " + urlInput, e);
+        } finally {
+            if (readStr != null) {
+                try {
+                    readStr.close();
+                } catch (IOException ignored) {
+                }
+            }
+            if (conn != null) conn.disconnect();
         }
     }
 
@@ -153,15 +186,51 @@ public class DownloadUtils {
             else return downloadFile(downloadFunction);
         }
 
-        int attempts = 0;
+        final int maxAttempts = 7;
         boolean fileOkay = verifyFile(outputFile, sha1);
         T result = null;
-        while (attempts < 5 && !fileOkay){
-            attempts++;
-            downloadFile(downloadFunction);
-            fileOkay = verifyFile(outputFile, sha1);
+        IOException lastError = null;
+
+        for (int attempt = 1; attempt <= maxAttempts && !fileOkay; attempt++) {
+            try {
+                // A failed HTTP stream can leave a partial file. Remove it before the
+                // next attempt so the next download always starts from a clean state.
+                if (outputFile.exists() && !outputFile.delete()) {
+                    Logging.w("DownloadUtils", "Could not delete failed download: " + outputFile);
+                }
+
+                downloadFile(downloadFunction);
+                fileOkay = verifyFile(outputFile, sha1);
+                if (!fileOkay) {
+                    lastError = new SHA1VerificationException(
+                            "SHA1 mismatch after download attempt " + attempt + "/" + maxAttempts);
+                }
+            } catch (IOException e) {
+                // Network errors, including java.net.ProtocolException: unexpected end
+                // of stream, are transient and should trigger an automatic retry.
+                lastError = e;
+                Logging.w("DownloadUtils", "Download attempt " + attempt + "/"
+                        + maxAttempts + " failed; retrying", e);
+            }
+
+            if (!fileOkay && outputFile.exists() && !outputFile.delete()) {
+                Logging.w("DownloadUtils", "Could not delete failed/incomplete download: " + outputFile);
+            }
+
+            if (!fileOkay && attempt < maxAttempts) {
+                try {
+                    Thread.sleep(1000L * attempt);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                    throw new IOException("Download retry interrupted", e);
+                }
+            }
         }
-        if(!fileOkay) throw new SHA1VerificationException("SHA1 verifcation failed after 5 download attempts");
+
+        if(!fileOkay) {
+            if (lastError != null) throw lastError;
+            throw new SHA1VerificationException("SHA1 verification failed after " + maxAttempts + " download attempts");
+        }
         return result;
     }
 
