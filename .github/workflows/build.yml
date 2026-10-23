@@ -1,0 +1,68 @@
+name: Build APK
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+    inputs:
+      arch:
+        description: "Arsitektur (arm64 = HP modern, all = semua ABI, APK besar)"
+        type: choice
+        default: arm64
+        options: [ arm64, arm, x86_64, x86, all ]
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 60
+    env:
+      ARCH: ${{ github.event.inputs.arch || 'arm64' }}
+      CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
+      ZL_BUILD_TYPE: DEBUG
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Gradle (cache)
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Install NDK 25.2.9519653
+        run: |
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "ndk;25.2.9519653" "build-tools;34.0.0" "platforms;android-34"
+
+      - name: Build JRE jar (jre_lwjgl3glfw)
+        run: |
+          chmod +x gradlew
+          mkdir -p out
+          ./gradlew jre_lwjgl3glfw:build --no-daemon
+
+      - name: Build APK (debug, ${{ env.ARCH }})
+        run: ./gradlew ZalithLauncher:assembleDebug -Darch=${{ env.ARCH }} --stacktrace
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: SallyLauncher-debug-${{ env.ARCH }}
+          path: ZalithLauncher/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
+
+      - name: Upload log kalau gagal
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-reports
+          path: |
+            **/build/reports/**
+          if-no-files-found: ignore
