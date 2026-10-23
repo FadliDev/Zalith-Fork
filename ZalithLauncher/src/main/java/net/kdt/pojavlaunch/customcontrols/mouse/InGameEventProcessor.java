@@ -37,8 +37,10 @@ public class InGameEventProcessor implements TouchEventProcessor {
                 float[] motionVector = mTracker.getMotionVector();
                 float deltaX = (float) (motionVector[0] * mSensitivity);
                 float deltaY = (float) (motionVector[1] * mSensitivity);
-                mLeftClickGesture.setMotion(deltaX, deltaY);
-                mRightClickGesture.setMotion(deltaX, deltaY);
+                if (!AllSettings.getDisableGestures().getValue()) {
+                    mLeftClickGesture.setMotion(deltaX, deltaY);
+                    mRightClickGesture.setMotion(deltaX, deltaY);
+                }
                 CallbackBridge.mouseX += deltaX;
                 CallbackBridge.mouseY += deltaY;
                 CallbackBridge.sendCursorPos(CallbackBridge.mouseX, CallbackBridge.mouseY);

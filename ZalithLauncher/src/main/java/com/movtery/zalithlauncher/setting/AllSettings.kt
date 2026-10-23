@@ -45,10 +45,10 @@ class AllSettings {
 
         // Control
         @JvmStatic
-        val disableGestures = BooleanSettingUnit("disableGestures", false)
+        val disableGestures = BooleanSettingUnit("disableGestures", true)
 
         @JvmStatic
-        val disableDoubleTap = BooleanSettingUnit("disableDoubleTap", false)
+        val disableDoubleTap = BooleanSettingUnit("disableDoubleTap", true)
 
         @JvmStatic
         val timeLongPressTrigger = IntSettingUnit("timeLongPressTrigger", 300)
@@ -66,7 +66,7 @@ class AllSettings {
         val mouseSpeed = IntSettingUnit("mousespeed", 100)
 
         @JvmStatic
-        val virtualMouseStart = BooleanSettingUnit("mouse_start", true)
+        val virtualMouseStart = BooleanSettingUnit("mouse_start", false)
 
         @JvmStatic
         val customMouse = StringSettingUnit("custom_mouse", "")

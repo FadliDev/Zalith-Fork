@@ -110,7 +110,8 @@ public class ControlLayout extends FrameLayout {
 			mLayout = null;
 		}
 
-		System.gc();
+		// Avoid forcing a full GC while switching control layouts. Android will
+		// reclaim unused views naturally; forcing GC here causes visible stutter.
 		mapTable.clear();
 
 		// Cleanup buttons only when input layout is null
@@ -239,7 +240,6 @@ public class ControlLayout extends FrameLayout {
 			removeView(button.getControlView());
 		}
 
-		System.gc();
 		//i wanna be sure that all the removed Views will be removed after a reload
 		//because if frames will slowly go down after many control changes it will be warm and bad
 	}

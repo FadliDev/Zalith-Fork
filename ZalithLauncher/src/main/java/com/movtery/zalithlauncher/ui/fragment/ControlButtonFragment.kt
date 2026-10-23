@@ -10,7 +10,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
-import com.getkeepsafe.taptargetview.TapTargetSequence
 import com.movtery.anim.AnimPlayer
 import com.movtery.anim.animations.Animations
 import com.movtery.zalithlauncher.R
@@ -28,7 +27,6 @@ import com.movtery.zalithlauncher.ui.subassembly.customcontrols.ControlSelectedL
 import com.movtery.zalithlauncher.ui.subassembly.customcontrols.ControlsListViewCreator
 import com.movtery.zalithlauncher.ui.subassembly.customcontrols.EditControlData.Companion.createNewControlFile
 import com.movtery.zalithlauncher.ui.subassembly.view.SearchViewWrapper
-import com.movtery.zalithlauncher.utils.NewbieGuideUtils
 import com.movtery.zalithlauncher.utils.path.PathManager
 import com.movtery.zalithlauncher.utils.ZHTools
 import com.movtery.zalithlauncher.utils.anim.AnimUtils.Companion.setVisibilityAnim
@@ -164,7 +162,6 @@ class ControlButtonFragment : FragmentWithAnim(R.layout.fragment_control_manager
 
         controlsListViewCreator.listAtPath()
 
-        startNewbieGuide()
     }
 
     private fun removeLockPath(path: String?): String {
@@ -239,29 +236,13 @@ class ControlButtonFragment : FragmentWithAnim(R.layout.fragment_control_manager
         }
     }
 
-    private fun startNewbieGuide() {
-        if (NewbieGuideUtils.showOnlyOne(TAG)) return
-        binding.operateView.apply {
-            val fragmentActivity = requireActivity()
-            TapTargetSequence(fragmentActivity)
-                .targets(
-                    NewbieGuideUtils.getSimpleTarget(fragmentActivity, refreshButton, getString(R.string.generic_refresh), getString(R.string.newbie_guide_general_refresh)),
-                    NewbieGuideUtils.getSimpleTarget(fragmentActivity, searchButton, getString(R.string.generic_search), getString(R.string.newbie_guide_control_search)),
-                    NewbieGuideUtils.getSimpleTarget(fragmentActivity, addFileButton, getString(R.string.controls_import_control), getString(R.string.newbie_guide_control_import)),
-                    NewbieGuideUtils.getSimpleTarget(fragmentActivity, createFolderButton, getString(R.string.controls_create_new), getString(R.string.newbie_guide_control_create)),
-                    NewbieGuideUtils.getSimpleTarget(fragmentActivity, returnButton, getString(R.string.generic_return), getString(R.string.newbie_guide_general_close)))
-                .start()
-        }
-    }
 
     override fun slideIn(animPlayer: AnimPlayer) {
-        animPlayer.apply(AnimPlayer.Entry(binding.controlLayout, Animations.BounceInDown))
-            .apply(AnimPlayer.Entry(binding.operateLayout, Animations.BounceInLeft))
+        // Keep the control manager instant and lightweight.
     }
 
     override fun slideOut(animPlayer: AnimPlayer) {
-        animPlayer.apply(AnimPlayer.Entry(binding.controlLayout, Animations.FadeOutUp))
-            .apply(AnimPlayer.Entry(binding.operateLayout, Animations.FadeOutRight))
+        // Keep the control manager instant and lightweight.
     }
 }
 

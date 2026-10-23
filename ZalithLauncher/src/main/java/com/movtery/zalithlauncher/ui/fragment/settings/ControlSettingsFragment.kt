@@ -1,8 +1,6 @@
 package com.movtery.zalithlauncher.ui.fragment.settings
 
 import android.content.Context
-import android.hardware.Sensor
-import android.hardware.SensorManager
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -41,6 +39,12 @@ class ControlSettingsFragment() : AbstractSettingsFragment(R.layout.settings_fra
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val context = requireContext()
+
+        // Simple control mode: keep the essential touch controls visible and
+        // hide advanced tuning that adds UI and configuration overhead.
+        binding.mouseCategory.visibility = View.GONE
+        binding.enableGyroCategory.visibility = View.GONE
+        binding.controllerCategory.visibility = View.GONE
         SwitchSettingsWrapper(
             context,
             AllSettings.disableGestures,
@@ -211,11 +215,7 @@ class ControlSettingsFragment() : AbstractSettingsFragment(R.layout.settings_fra
             "%"
         )
 
-        val mGyroAvailable =
-            (context.getSystemService(Context.SENSOR_SERVICE) as SensorManager).getDefaultSensor(
-                Sensor.TYPE_GYROSCOPE
-            ) != null
-        binding.enableGyroCategory.visibility = if (mGyroAvailable) View.VISIBLE else View.GONE
+        binding.enableGyroCategory.visibility = View.GONE
 
         computeVisibility()
     }
@@ -226,7 +226,7 @@ class ControlSettingsFragment() : AbstractSettingsFragment(R.layout.settings_fra
     }
 
     override fun slideIn(animPlayer: AnimPlayer) {
-        animPlayer.apply(AnimPlayer.Entry(binding.root, Animations.BounceInDown))
+        // Keep control settings instant on low-end devices.
     }
 
     private fun computeVisibility() {

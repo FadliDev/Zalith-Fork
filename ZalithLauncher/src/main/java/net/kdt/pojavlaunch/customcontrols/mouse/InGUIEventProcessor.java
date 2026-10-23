@@ -27,7 +27,8 @@ public class InGUIEventProcessor implements TouchEventProcessor {
 
     @Override
     public boolean processTouchEvent(MotionEvent motionEvent) {
-        boolean singleTap = mSingleTapDetector.onTouchEvent(motionEvent);
+        boolean useTapDetector = !AllSettings.getDisableGestures().getValue() || touchpadDisplayed();
+        boolean singleTap = useTapDetector && mSingleTapDetector.onTouchEvent(motionEvent);
 
         switch (motionEvent.getActionMasked()) {
             case MotionEvent.ACTION_DOWN:

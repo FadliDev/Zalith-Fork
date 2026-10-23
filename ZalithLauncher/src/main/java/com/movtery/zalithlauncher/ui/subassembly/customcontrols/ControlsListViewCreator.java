@@ -3,8 +3,6 @@ package com.movtery.zalithlauncher.ui.subassembly.customcontrols;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.View;
-import android.view.animation.AnimationUtils;
-import android.view.animation.LayoutAnimationController;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -77,7 +75,6 @@ public class ControlsListViewCreator {
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(context);
         mainListView.setLayoutManager(layoutManager);
-        mainListView.setLayoutAnimation(new LayoutAnimationController(AnimationUtils.loadAnimation(context, R.anim.fade_downwards)));
         mainListView.setAdapter(controlListAdapter);
     }
 
@@ -175,7 +172,6 @@ public class ControlsListViewCreator {
             return itemBeans;
         }).ended(TaskExecutors.getAndroidUI(), data -> {
             controlListAdapter.updateItems(data);
-            mainListView.scheduleLayoutAnimation();
 
             if (searchCountText != null) {
                 //展示搜索结果
