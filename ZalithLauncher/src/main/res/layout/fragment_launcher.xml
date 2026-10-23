@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Beranda portrait: akun di atas, menu di tengah (scroll), versi + tombol main di bawah -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_menu_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:ignore="ContentDescription">
+
+    <!-- Akun -->
+    <FrameLayout
+        android:id="@+id/account_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@drawable/background_item"
+        android:padding="@dimen/_8sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/view_account"
+            layout="@layout/view_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <!-- Menu -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/launcher_menu"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/play_layout"
+        app:layout_constraintTop_toBottomOf="@id/account_container">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:paddingBottom="@dimen/_6sdp">
+
+        <LinearLayout
+            android:id="@+id/about_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:background="@drawable/background_item"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/about_icon"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:src="@drawable/ic_about" />
+
+            <TextView
+                android:id="@+id/about_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_weight="1"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/_12sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/custom_control_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:background="@drawable/background_item"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/custom_control_icon"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:src="@drawable/ic_menu_custom_controls" />
+
+            <TextView
+                android:text="@string/custom_control_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_weight="1"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/_12sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/open_main_dir_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:background="@drawable/background_item"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/open_main_dir_icon"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:src="@drawable/ic_folder" />
+
+            <TextView
+                android:text="@string/main_open_main_dir"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_weight="1"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/_12sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/install_jar_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:background="@drawable/background_item"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/install_jar_icon"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:src="@drawable/ic_java" />
+
+            <TextView
+                android:text="@string/main_install_jar_file"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_weight="1"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/_12sdp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/share_logs_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:background="@drawable/background_item"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/share_logs_icon"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:src="@drawable/ic_share" />
+
+            <TextView
+                android:text="@string/main_share_logs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_weight="1"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/_12sdp" />
+        </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Bar bawah: versi + tombol main -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/play_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/menu_overlay"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/play_main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_12sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/play_buttons_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/version"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toStartOf="@+id/manager_profile_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/version_icon"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_minecraft" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/version_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="start"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="@string/version_no_versions" />
+
+                        <TextView
+                            android:id="@+id/version_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="start"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/manager_profile_button"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_setting"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.movtery.zalithlauncher.ui.view.AnimButton
+                    android:id="@+id/play_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="@string/main_launch"
+                    android:textAllCaps="true"
+                    app:layout_constraintTop_toBottomOf="@id/version" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- shadowView dipertahankan (id dipakai binding), tanpa efek -->
+    <View
+        android:id="@+id/shadowView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
